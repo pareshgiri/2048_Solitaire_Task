@@ -137,18 +137,22 @@ public class CardMovement : MonoBehaviour
                    });
                     _isPlaced = true;
                     enabled = false;
+                //SetLimit();
+                Invoke("SetLimit",1);
             }
-            else
-            {
+                else
+                {
                 if (enabled)
                 {
-                    Setlimit();
+
+                    // SetLimit();
+                    Invoke("SetLimit", 1);
                     Soundmanager.Instance.PlaySound(Soundmanager.Sound.wrong);
                     transform.position = _originalPos;
                     _isMoving = false;
                     _isPlaced = false;
                 }
-            }
+                }
         }
         else
         {
@@ -221,8 +225,10 @@ public class CardMovement : MonoBehaviour
         _isCollide = false;
     }
 
-    public void Setlimit()
+    public void SetLimit()
     {
+        Debug.Log("SETLIMIT " + BlockManager.Instance.Block1.Count + " " + BlockManager.Instance.Block2.Count + " " + BlockManager.Instance.Block3.Count + " " + BlockManager.Instance.Block4.Count);
+
         if (BlockManager.Instance.Block1.Count > 7 && BlockManager.Instance.Block2.Count > 7 && BlockManager.Instance.Block3.Count > 7 && BlockManager.Instance.Block4.Count > 7)
         {
             Debug.Log("gameOver");
