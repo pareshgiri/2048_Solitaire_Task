@@ -73,7 +73,7 @@ public class AdditionofCards : MonoBehaviour
 
                                 //count = 1;
                                 Debug.Log("card Value " + _cardValue);
-                                if(_cardValue > SufflingCards.Instance.Deck[SufflingCards.Instance.cardRange-1])
+                                if(_cardValue > SufflingCards.Instance.Deck[SufflingCards.Instance.cardRange-1] && SufflingCards.Instance.cardRange<7)
                                 {
                                      SufflingCards.Instance.cardRange++;
                                 }

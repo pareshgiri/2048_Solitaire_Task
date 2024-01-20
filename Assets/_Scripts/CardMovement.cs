@@ -227,7 +227,7 @@ public class CardMovement : MonoBehaviour
 
     public void SetLimit()
     {
-        Debug.Log("SETLIMIT " + BlockManager.Instance.Block1.Count + " " + BlockManager.Instance.Block2.Count + " " + BlockManager.Instance.Block3.Count + " " + BlockManager.Instance.Block4.Count);
+       // Debug.Log("SETLIMIT " + BlockManager.Instance.Block1.Count + " " + BlockManager.Instance.Block2.Count + " " + BlockManager.Instance.Block3.Count + " " + BlockManager.Instance.Block4.Count);
 
         if (BlockManager.Instance.Block1.Count > 7 && BlockManager.Instance.Block2.Count > 7 && BlockManager.Instance.Block3.Count > 7 && BlockManager.Instance.Block4.Count > 7)
         {
